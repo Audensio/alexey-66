@@ -1,0 +1,20 @@
+howmach_tickets = int(input("Введите количество билетов: "))
+price_ticks = 0
+
+for i in range(howmach_tickets):
+    age = int(input("Сколько вам лет?: "))
+    i += 1
+    if age < 18:
+        print("Бесплатно!")
+    elif 18 <= age < 25:
+        price_ticks += 990
+        print('Билет стоит 990 рублей')
+    else:
+        price_ticks += 1390
+        print("Билет стоит 1390 рублей")
+if howmach_tickets > 3:
+    price_ticks = price_ticks*0.9
+    print("Стоимость билетов с 10% скидкой для более 3 человек: ", price_ticks)
+else:
+    print("Сумма к оплате:", price_ticks)
+    
